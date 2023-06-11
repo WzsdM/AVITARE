@@ -1,0 +1,157 @@
+:root {
+	--primary: rgb(0, 128, 0);
+	--white: rgb(255, 255, 255);
+	--lightgray:rgb(211, 211, 211);
+	--gray:rgb(128, 128, 128);
+  }
+*{
+	margin: 0;
+	padding: 0;
+	font-family: verdana, sans-serif;
+}
+a{
+	font-style: none;
+	text-decoration: none;
+	color: var(--white);
+}
+.navbarUp{
+	background: var(--white);
+	display: flex;
+	height: 7.5vh;
+	font-size: 0.7em;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding-left: 3em;
+	padding-right: 3em;
+	border-bottom: solid 0.1em;
+	border-color: var(--lightgray);
+}
+.left{
+	width: 20vw;
+	display: flex;
+	justify-self: start;
+	justify-content: space-between;
+	vertical-align: middle;
+	align-items: center;
+}
+.menu{
+	display: flex;
+	width: 5vw;
+	align-items: center;
+	justify-content: space-around;
+}
+.logo{
+	width: 11vw;
+	height: 4.5vh;
+	background-image: url('../img/logo.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.right{
+	display: flex;
+	width: 54vw;
+	justify-self: end;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.cambio {
+    width: 11rem;
+}
+.vline{
+	width: .1em;
+    height: 2em;
+    border-right: solid 0.1em;
+    border-color: var(--lightgray);
+}
+.btnAyuda{
+    width: 8vw;
+    height: 2vh;
+    display: flex;
+    padding: 5px;
+    border: solid 0.1em;
+    border-radius: 5px;
+    border-color: var(--lightgray);
+    align-items: center;
+    justify-content: space-around;
+}
+.moreOptions i{
+	font-size: 1.3em;
+	padding: 0.5em;
+	color: var(--gray);
+}
+.usuario {
+    width: 10vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.imgUser{
+	background: var(--primary);
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 1.5rem;
+}
+.body{
+	display: flex;
+}
+.navbarLateral{
+	background: var(--primary);
+	width: 18vw;
+	height: 92.5vh;
+	box-sizing: border-box;
+	padding-top: 0.2em;
+}
+li a{
+	background: transparent;
+	display: flex;
+	height: 2.3em;
+    align-items: center;
+    border-radius: 0.6em;
+    margin: 0.6em;
+    transition: ease-in-out;
+    transition-duration: 0.4s;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+}
+li a:hover{
+	background: var(--white);
+	color: var(--primary);
+}
+.abajo{
+	justify-self: end;
+}
+.active{
+	background: var(--white);
+	color: var(--primary);
+}
+.contentBlock{
+	width: 82vw;
+	display: inline-grid;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+}
+.title{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.titleUser{
+	color: var(--primary);
+}
+.titleBienvenida{
+	font-size: 1.5rem;
+}
+.indexImg{
+	width: 28vw;
+	height: 50vh;
+	background-image: url('../img/edificio.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
