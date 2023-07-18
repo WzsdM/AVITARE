@@ -1,0 +1,1077 @@
+{% extends 'menu.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyectos</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/crearproyecto.css'%}">
+    <link rel="stylesheet" media="screen" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+      apiKey: "AIzaSyCudkjXLezfl4cU9tZzVL7QghFIB46egmM",
+      authDomain: "salferinversiones.firebaseapp.com",
+      databaseURL: "https://salferinversiones.firebaseio.com",
+      projectId: "salferinversiones",
+      storageBucket: "salferinversiones.appspot.com",
+      messagingSenderId: "499539526287",
+      appId: "1:499539526287:web:c57319e0eb7dd54a99a6fa",
+      measurementId: "G-TQSZ3R7NG0"
+    };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</head>
+<body>
+  <div class="tabs">
+    <ul class="tabs__items">
+    <li class="active-tab tabs__itemActive">
+    <a href="#tab1" original_title="">
+    Básicos
+    </a>
+    </li>
+    <li class="">
+    <a href="#tab2" original_title="">
+    Datos Extras
+    </a>
+    </li>
+    </ul>
+  </div>
+  <div class="form-submit">
+    <form class="simple_form new_project" id="new_project" enctype="multipart/form-data" action="/projects" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="zRNrwj2PTahoHY4MSMX8aLK3osZkHpQBJ1KA2QpdKD2mphKoFfJnC8HTJv-d5AzL0A4YFTT9ePnVpHZcOXNJuQ" autocomplete="off"><div class="tab-content" id="tab1" style="display: block;">
+    <fieldset>
+    <legend>Generales</legend>
+    <div class="control-group string required project_name"><label class="string required control-label" for="project_name"><abbr title="requerido">*</abbr> Nombre</label><div class="controls"><input class="string required" required="required" aria-required="true" type="text" name="project[name]" id="project_name"></div></div>
+    <div class="control-group file optional project_logo"><label class="file optional control-label" for="project_logo">Subir Logo</label><div class="controls"><input class="file optional" type="file" name="project[logo]" id="project_logo"></div></div>
+    <div class="control-group string required project_code"><label class="string required control-label" for="project_code"><abbr title="requerido">*</abbr> Código</label><div class="controls"><input class="string required" required="required" aria-required="true" type="text" name="project[code]" id="project_code"></div></div>
+    <div class="control-group select optional project_owner"><label class="select optional control-label" for="project_owner_id">Owner</label><div class="controls"><select class="select optional chosen-select" name="project[owner_id]" id="project_owner_id"><option value="">- Seleccionar -</option>
+    <option value="1319">Aledur s.a</option>
+    <option value="556">Barriga, Carlos</option>
+    <option value="620">Bhatia, Shreya</option>
+    <option value="1555">De Hinostroza, Marlene</option>
+    <option value="313">Leon Capcha, Patricia Maximina</option>
+    <option value="373">Martel, Jacqueline</option>
+    <option value="423">Melgarejo, Anthony</option>
+    <option value="1787">Monchess Alza, María Fernanda</option>
+    <option value="1788">Noriega Castañeda, Andrea Massiel</option>
+    <option value="333">Nuevo, Juan</option>
+    <option value="372">Pinton, Angel</option>
+    <option value="141">Ramirez, Chalo</option>
+    <option value="374">Rivasplata, Viviana</option>
+    <option value="334">Robles, Hugo</option>
+    <option value="611">Carlos</option></select><div class="chosen-container chosen-container-single" title="" id="project_owner_id_chosen" style="width: 300px;"><a class="chosen-single" original_title="">
+      <input class="chosen-focus-input" type="text" autocomplete="off">
+      <span>- Seleccionar -</span>
+      <div><b></b></div>
+    </a>
+    <div class="chosen-drop">
+      <div class="chosen-search">
+        <input class="chosen-search-input" type="text" autocomplete="off">
+      </div>
+      <ul class="chosen-results"></ul>
+    </div></div></div></div>
+    <div class="control-group select required project_currency"><label class="select required control-label" for="project_currency"><abbr title="requerido">*</abbr> Moneda</label><div class="controls"><select class="select required chosen-select" required="required" aria-required=" - Seleccione Moneda - " name="project[currency]" id="project_currency"><option value=""> - Seleccione Moneda - </option>
+    <option value="USD">United States Dollar</option>
+    <option value="VEF">Bolivar</option>
+    <option selected="selected" value="PEN">Peruvian Nuevo Sol</option></select><div class="chosen-container chosen-container-single" title="" id="project_currency_chosen" style="width: 300px;"><a class="chosen-single" original_title="">
+      <input class="chosen-focus-input" type="text" autocomplete="off">
+      <span>Peruvian Nuevo Sol</span>
+      <div><b></b></div>
+    </a>
+    <div class="chosen-drop">
+      <div class="chosen-search">
+        <input class="chosen-search-input" type="text" autocomplete="off">
+      </div>
+      <ul class="chosen-results"></ul>
+    </div></div></div></div>
+    <div class="control-group integer required project_project_type_id"><label class="integer required control-label" for="project_project_type_id"><abbr title="requerido">*</abbr> Tipo de Edificación</label><div class="controls"><select name="project[project_type_id]" id="project_project_type_id"><option value=""> - Tipo de Edificación - </option>
+    <option class="false" value="4">Apartamento</option>
+    <option class="false" value="3">Casa</option>
+    <option class="false" value="21">Closet</option>
+    <option class="true" value="7">Condominio</option>
+    <option class="true" value="9">Conjunto Habitacional</option>
+    <option class="false" value="12">Departamento Duplex</option>
+    <option class="false" value="16">Departamento Flat</option>
+    <option class="false" value="15">Departamento Loft</option>
+    <option class="false" value="25">Departamento Simple</option>
+    <option class="false" value="14">Departamento Triplex</option>
+    <option class="false" value="10">Depósito</option>
+    <option class="true" value="8">Edificio</option>
+    <option class="false" value="19">Estacionamiento Con Depósito</option>
+    <option class="false" value="31">Estacionamiento De Auto Techado</option>
+    <option class="false" value="2">Estacionamiento Simple</option>
+    <option class="false" value="18">Local Comercial</option>
+    <option class="false" value="1">Lote</option>
+    <option class="false" value="17">Oficina</option>
+    <option class="false" value="24">Oficina Duplex</option>
+    <option class="true" value="6">Playa De Estacionamiento</option>
+    <option class="false" value="13">Proyecto</option></select>
+    </div></div><div class="control-group select required project_venture_type"><label class="select required control-label" for="project_venture_type_id"><abbr title="requerido">*</abbr> Tipo de Proyecto</label><div class="controls"><select class="select required chosen-select" required="required" aria-required="- Seleccionar -" name="project[venture_type_id]" id="project_venture_type_id"><option value="">- Seleccionar -</option>
+    <option value="1">Edificio comercial</option>
+    <option value="2">Vivienda residencial</option>
+    <option value="3">Vivienda masiva</option>
+    <option value="4">Vivienda individual</option>
+    <option value="5">Oficinas</option>
+    <option value="6">Industrial</option>
+    <option value="7">Adicionales</option>
+    <option value="8">Otros</option></select><div class="chosen-container chosen-container-single" title="" id="project_venture_type_id_chosen" style="width: 300px;"><a class="chosen-single" original_title="">
+      <input class="chosen-focus-input" type="text" autocomplete="off">
+      <span>- Seleccionar -</span>
+      <div><b></b></div>
+    </a>
+    <div class="chosen-drop">
+      <div class="chosen-search">
+        <input class="chosen-search-input" type="text" autocomplete="off">
+      </div>
+      <ul class="chosen-results"></ul>
+    </div></div></div></div>
+    <div class="embebed_project">
+    <div class="control-group decimal optional project_total_cost"><label class="decimal optional control-label" for="project_total_cost">Costo Total</label><div class="controls"><input class="numeric decimal optional" type="number" step="any" name="project[total_cost]" id="project_total_cost"></div></div>
+    </div>
+    <div class="control-group text optional project_description"><label class="text optional control-label" for="project_description">Descripción</label><div class="controls"><textarea rows="6" cols="44" class="text optional" name="project[description]" id="project_description"></textarea><a class="validation info-icon" original_title="Breve detalle sobre proyecto."></a></div></div>
+    <div class="control-group extra_fields">
+    <label class=" control-label" for="ruc">Ruc</label>
+    <div class="controls">
+    <input value="ruc" autocomplete="off" type="hidden" name="project[additional_fields_attributes][0][name]" id="project_additional_fields_attributes_0_name">
+    <span class="field-in"><input value="" type="text" name="project[additional_fields_attributes][0][value]" id="project_additional_fields_attributes_0_value"></span>
+    </div>
+    </div>
+    <div class="control-group extra_fields">
+    <label class=" control-label" for="probando_bug_aversisale">Probando bug aversisale</label>
+    <div class="controls">
+    <input value="probando_bug_aversisale" autocomplete="off" type="hidden" name="project[additional_fields_attributes][1][name]" id="project_additional_fields_attributes_1_name">
+    <span class="field-in"><input value="" type="text" name="project[additional_fields_attributes][1][value]" id="project_additional_fields_attributes_1_value"></span>
+    </div>
+    </div>
+    <div class="control-group extra_fields">
+    <label class=" control-label" for="promotor">Promotor</label>
+    <div class="controls">
+    <input value="promotor" autocomplete="off" type="hidden" name="project[additional_fields_attributes][2][name]" id="project_additional_fields_attributes_2_name">
+    <span class="field-in"><input value="" type="text" name="project[additional_fields_attributes][2][value]" id="project_additional_fields_attributes_2_value"></span>
+    </div>
+    </div>
+    <div class="control-group datepicker optional project_start_date_sale"><label class="datepicker optional control-label" for="project_start_date_sale">Fecha de Inicio de Venta</label><div class="controls"><input class="datepicker optional hasDatepicker" type="text" name="project[start_date_sale]" id="project_start_date_sale" autocomplete="off" placeholder="dd-mm-yyyy"></div></div>
+    <div class="control-group integer optional project_total_levels"><label class="integer optional control-label" for="project_total_levels">Número de Pisos</label><div class="controls"><input value="1" class="numeric integer optional" type="number" step="1" name="project[total_levels]" id="project_total_levels"></div></div>
+    <div class="control-group select optional project_bank_ids"><label class="select optional control-label" for="project_bank_ids">Financiamiento</label><div class="controls"><input name="project[bank_ids][]" type="hidden" value="" autocomplete="off"><select multiple="multiple" data-placeholder="- Seleccione entidades-" class="select optional chosen-select" name="project[bank_ids][]" id="project_bank_ids"><option value="17">Agrobanco</option>
+    <option value="14">Banco Azteca</option>
+    <option value="15">Banco Cencosud</option>
+    <option value="1">Banco de Comercio</option>
+    <option value="2">Banco de Crédito del Perú (BCP)</option>
+    <option value="18">Banco de la Nación</option>
+    <option value="74">Banco Empresa</option>
+    <option value="11">Banco Falabella</option>
+    <option value="10">Banco GNB Perú</option>
+    <option value="61">Banco hsbc Bank Peru s.a.</option>
+    <option value="3">Banco Interamericano de Finanzas (BanBif)</option>
+    <option value="4">Banco Pichincha</option>
+    <option value="12">Banco Ripley</option>
+    <option value="13">Banco Santander Perú</option>
+    <option value="5">BBVA Perú</option>
+    <option value="43">Caja Metropolitana de Lima</option>
+    <option value="37">Caja Municipal Ica</option>
+    <option value="32">Cajas Municipal Arequipa</option>
+    <option value="33">Cajas Municipal Cusco</option>
+    <option value="34">Cajas Municipal Del Santa</option>
+    <option value="36">Cajas Municipal Huancayo</option>
+    <option value="38">Cajas Municipal Maynas</option>
+    <option value="39">Cajas Municipal Paita</option>
+    <option value="40">Cajas Municipal Piura</option>
+    <option value="41">Cajas Municipal Sullana</option>
+    <option value="42">Cajas Municipal Tacna</option>
+    <option value="35">Cajas Municipal Trujillo</option>
+    <option value="48">Cajas Rural Del Centro</option>
+    <option value="44">Cajas Rural Incasur</option>
+    <option value="45">Cajas Rural Los Andes</option>
+    <option value="46">Cajas Rural Prymera</option>
+    <option value="49">Cajas Rural Raíz</option>
+    <option value="47">Cajas Rural Sipán</option>
+    <option value="6">Citibank</option>
+    <option value="19">COFIDE</option>
+    <option value="68">Cooperativa ABACO</option>
+    <option value="67">Cooperativa AELUCOOP</option>
+    <option value="66">Cooperativa de Ahorro y Crédito San Francisco Ltda</option>
+    <option value="72">Cooperativa de Ahorro y Crédito Servicredit</option>
+    <option value="65">Cooperativa San Francisco de Huanuco</option>
+    <option value="75">EAFC Maquisistema SA</option>
+    <option value="76">EAFC Pandero SA</option>
+    <option value="50">Edpyme Acceso Crediticio</option>
+    <option value="51">Edpyme Alternativa</option>
+    <option value="52">Edpyme BBVA Consumer Finance</option>
+    <option value="53">Edpyme Credivisión</option>
+    <option value="58">Edpyme GMG Servicios Perú</option>
+    <option value="54">Edpyme Inversiones La Cruz</option>
+    <option value="56">Edpyme Marcimex</option>
+    <option value="55">Edpyme Mi Casita</option>
+    <option value="57">Edpyme Solidaridad</option>
+    <option value="21">Financiera Amérika</option>
+    <option value="24">Financiera Compartamos</option>
+    <option value="23">Financiera Confianza</option>
+    <option value="25">Financiera Credinka</option>
+    <option value="22">Financiera Crediscotia</option>
+    <option value="26">Financiera Efectiva</option>
+    <option value="28">Financiera Mitsui</option>
+    <option value="29">Financiera Oh!</option>
+    <option value="27">Financiera Proempresa</option>
+    <option value="30">Financiera Qapaq</option>
+    <option value="31">Financiera TFC</option>
+    <option value="20">Fondo MiVivienda</option>
+    <option value="62">Fovimar</option>
+    <option value="71">Fovime</option>
+    <option value="63">Fovimfap</option>
+    <option value="64">Fovipol</option>
+    <option value="16">ICBC PERU BANK</option>
+    <option value="7">Interbank</option>
+    <option value="59">J.P. Morgan Banco de Inversión</option>
+    <option value="8">MiBanco</option>
+    <option value="69">Migracion</option>
+    <option value="70">Otros</option>
+    <option value="73">Palante Préstamos</option>
+    <option value="9">Scotiabank Perú</option>
+    <option value="60">Sura</option></select><div class="chosen-container chosen-container-multi" title="" id="project_bank_ids_chosen" style="width: 300px;"><ul class="chosen-choices">
+      <li class="search-field">
+        <input class="chosen-search-input default" type="text" autocomplete="off" value="- Seleccione entidades-" style="width: 160.859px;">
+      </li>
+    </ul>
+    <div class="chosen-drop">
+      <ul class="chosen-results"></ul>
+    </div></div></div></div>
+    </fieldset>
+    <fieldset>
+    <legend>Construcción</legend>
+    <div class="control-group select optional project_construction_status"><label class="select optional control-label" for="project_construction_status_id">Estado de construcción</label><div class="controls"><select class="select optional chosen-select" name="project[construction_status_id]" id="project_construction_status_id"><option value=""> - Estado de construcción - </option>
+    <option value="1">Casco</option>
+    <option value="4">En Acabados</option>
+    <option value="2">En Curso</option>
+    <option value="7">En Excavación</option>
+    <option value="3">En Planos</option>
+    <option value="6">Obra No Iniciada</option>
+    <option value="5">Obra Terminada</option></select><div class="chosen-container chosen-container-single" title="" id="project_construction_status_id_chosen" style="width: 300px;"><a class="chosen-single" original_title="">
+      <input class="chosen-focus-input" type="text" autocomplete="off">
+      <span> - Estado de construcción - </span>
+      <div><b></b></div>
+    </a>
+    <div class="chosen-drop">
+      <div class="chosen-search">
+        <input class="chosen-search-input" type="text" autocomplete="off">
+      </div>
+      <ul class="chosen-results"></ul>
+    </div></div><a class="validation info-icon" original_title="Hasta que punto se ha llegado construir de la obra, o en promedio de todas sus unidades."></a></div></div>
+    <div class="control-group datepicker optional project_estimated_date"><label class="datepicker optional control-label" for="project_estimated_date">Fecha Estimada de Entrega del Proyecto</label><div class="controls"><input class="datepicker optional hasDatepicker" type="text" name="project[estimated_date]" id="project_estimated_date" autocomplete="off" placeholder="dd-mm-yyyy"><a class="validation info-icon" original_title="Fecha estimada de construcción de la obra entera."></a></div></div>
+    </fieldset>
+    <fieldset>
+    <legend>Ubicación</legend>
+    <div class="locationable" data-locationable="project" data-tag-name-district="district" data-tag-name-province="province" data-tag-name-subregion="department"></div>
+    <div class="control-group integer required project_country"><label class="integer required control-label" for="project_country"><abbr title="requerido">*</abbr> País</label><div class="controls"><div class="inline" id="location_country_code_wrapper">
+    <select name="project[country]" id="project_country" class="chosen-select"><option value="MX">México</option>
+    <option disabled="disabled" value="---------------">---------------</option>
+    <option value="AF">Afganistán</option>
+    <option value="AL">Albania</option>
+    <option value="DE">Alemania</option>
+    <option value="DZ">Algeria</option>
+    <option value="AD">Andorra</option>
+    <option value="AO">Angola</option>
+    <option value="AI">Anguila</option>
+    <option value="AQ">Antártida</option>
+    <option value="AG">Antigua y Barbuda</option>
+    <option value="SA">Arabia Saudí</option>
+    <option value="AR">Argentina</option>
+    <option value="AM">Armenia</option>
+    <option value="AW">Aruba</option>
+    <option value="AU">Australia</option>
+    <option value="AT">Austria</option>
+    <option value="AZ">Azerbaiyán</option>
+    <option value="BS">Bahamas</option>
+    <option value="BD">Bangladés</option>
+    <option value="BB">Barbados</option>
+    <option value="BH">Baréin</option>
+    <option value="BE">Bélgica</option>
+    <option value="BZ">Belice</option>
+    <option value="BJ">Benín</option>
+    <option value="BY">Bielorrusia</option>
+    <option value="MM">Birmania</option>
+    <option value="BO">Bolivia</option>
+    <option value="BA">Bosnia y Herzegovina</option>
+    <option value="BW">Botsuana</option>
+    <option value="BR">Brasil</option>
+    <option value="BN">Brunei Darussalam</option>
+    <option value="BG">Bulgaria</option>
+    <option value="BF">Burquina Faso</option>
+    <option value="BI">Burundi</option>
+    <option value="BT">Bután</option>
+    <option value="CV">Cabo Verde</option>
+    <option value="KH">Camboya</option>
+    <option value="CM">Camerún</option>
+    <option value="CA">Canadá</option>
+    <option value="QA">Catar</option>
+    <option value="TD">Chad</option>
+    <option value="CZ">Chequia</option>
+    <option value="CL">Chile</option>
+    <option value="CN">China</option>
+    <option value="CY">Chipre</option>
+    <option value="CO">Colombia</option>
+    <option value="KM">Comores, Islas</option>
+    <option value="CG">Congo</option>
+    <option value="CD">Congo, República Democrática del</option>
+    <option value="KP">Corea, República Democrática Popular de</option>
+    <option value="KR">Corea, República de</option>
+    <option value="CR">Costa Rica</option>
+    <option value="CI">Costa de Marfíl</option>
+    <option value="HR">Croacia</option>
+    <option value="CU">Cuba</option>
+    <option value="CW">Curazao</option>
+    <option value="DK">Dinamarca</option>
+    <option value="DM">Dominica</option>
+    <option value="EC">Ecuador</option>
+    <option value="EG">Egipto</option>
+    <option value="SV">El Salvador</option>
+    <option value="AE">Emiratos Árabes Unidos</option>
+    <option value="ER">Eritrea</option>
+    <option value="SK">Eslovaquia</option>
+    <option value="SI">Eslovenia</option>
+    <option value="ES">España</option>
+    <option value="US">Estados Unidos</option>
+    <option value="EE">Estonia</option>
+    <option value="ET">Etiopía</option>
+    <option value="RU">Federación Rusa</option>
+    <option value="PH">Filipinas</option>
+    <option value="FI">Finlandia</option>
+    <option value="FJ">Fiyi</option>
+    <option value="FR">Francia</option>
+    <option value="GA">Gabón</option>
+    <option value="GM">Gambia</option>
+    <option value="GE">Georgia</option>
+    <option value="GH">Ghana</option>
+    <option value="GI">Gibraltar</option>
+    <option value="GD">Granada</option>
+    <option value="GR">Grecia</option>
+    <option value="GL">Groenlandia</option>
+    <option value="GP">Guadalupe</option>
+    <option value="GU">Guam</option>
+    <option value="GT">Guatemala</option>
+    <option value="GF">Guayana Francesa</option>
+    <option value="GG">Guernsey</option>
+    <option value="GQ">Guinea Ecuatorial</option>
+    <option value="GN">Guinea</option>
+    <option value="GW">Guinea-Bisáu</option>
+    <option value="GY">Guyana</option>
+    <option value="HT">Haití</option>
+    <option value="HN">Honduras</option>
+    <option value="HK">Hong Kong</option>
+    <option value="HU">Hungría</option>
+    <option value="IN">India</option>
+    <option value="ID">Indonesia</option>
+    <option value="IQ">Irak</option>
+    <option value="IR">Irán, República islámica de</option>
+    <option value="IE">Irlanda</option>
+    <option value="BV">Isla Bouvet</option>
+    <option value="NF">Isla Norfolk</option>
+    <option value="IM">Isla de Man</option>
+    <option value="CX">Isla de Navidad</option>
+    <option value="SX">Isla de San Martín (zona holandsea)</option>
+    <option value="IS">Islandia</option>
+    <option value="AX">Islas Äland</option>
+    <option value="BQ">Islas BES (Caribe Neerlandés)</option>
+    <option value="BM">Islas Bermudas</option>
+    <option value="KY">Islas Caimán</option>
+    <option value="CC">Islas Cocos (Keeling)</option>
+    <option value="CK">Islas Cook</option>
+    <option value="FK">Islas Falkland (Malvinas)</option>
+    <option value="FO">Islas Feroe</option>
+    <option value="GS">Islas Georgias del Sur y Sándwich del Sur</option>
+    <option value="HM">Islas Heard y McDonald</option>
+    <option value="MV">Islas Maldivas</option>
+    <option value="MP">Islas Marianas del Norte</option>
+    <option value="MH">Islas Marshall</option>
+    <option value="SB">Islas Salomón</option>
+    <option value="TC">Islas Turcas y Caicos</option>
+    <option value="UM">Islas Ultramarinas Menores de Estados Unidos</option>
+    <option value="VG">Islas Vírgenes, Británicas</option>
+    <option value="VI">Islas Vírgenes, de EEUU</option>
+    <option value="IL">Israel</option>
+    <option value="IT">Italia</option>
+    <option value="JM">Jamaica</option>
+    <option value="JP">Japón</option>
+    <option value="JE">Jersey</option>
+    <option value="JO">Jordania</option>
+    <option value="KZ">Kazajistán</option>
+    <option value="KE">Kenia</option>
+    <option value="KG">Kirguistán</option>
+    <option value="KI">Kiribati</option>
+    <option value="KW">Kuwait</option>
+    <option value="LS">Lesoto</option>
+    <option value="LV">Letonia</option>
+    <option value="LB">Líbano</option>
+    <option value="LR">Liberia</option>
+    <option value="LY">Libia</option>
+    <option value="LI">Liechtenstein</option>
+    <option value="LT">Lituania</option>
+    <option value="LU">Luxemburgo</option>
+    <option value="MO">Macao</option>
+    <option value="MK">Macedonia del Norte</option>
+    <option value="MG">Madagascar</option>
+    <option value="MY">Malasia</option>
+    <option value="MW">Malaui</option>
+    <option value="ML">Mali</option>
+    <option value="MT">Malta</option>
+    <option value="MA">Marruecos</option>
+    <option value="MQ">Martinica</option>
+    <option value="MU">Mauricio</option>
+    <option value="MR">Mauritania</option>
+    <option value="YT">Mayotte</option>
+    <option value="MX">México</option>
+    <option value="FM">Micronesia, Estados Federados de</option>
+    <option value="MD">Moldavia</option>
+    <option value="MC">Mónaco</option>
+    <option value="MN">Mongolia</option>
+    <option value="ME">Montenegro</option>
+    <option value="MS">Montserrat</option>
+    <option value="MZ">Mozambique</option>
+    <option value="NA">Namibia</option>
+    <option value="NR">Nauru</option>
+    <option value="NP">Nepal</option>
+    <option value="NI">Nicaragua</option>
+    <option value="NE">Niger</option>
+    <option value="NG">Nigeria</option>
+    <option value="NU">Niue</option>
+    <option value="NO">Noruega</option>
+    <option value="NC">Nueva Caledonia</option>
+    <option value="NZ">Nueva Zelanda</option>
+    <option value="OM">Omán</option>
+    <option value="NL">Países Bajos</option>
+    <option value="PK">Pakistán</option>
+    <option value="PW">Palaos</option>
+    <option value="PS">Palestina, Estado de</option>
+    <option value="PA">Panamá</option>
+    <option value="PG">Papúa Nueva Guinea</option>
+    <option value="PY">Paraguay</option>
+    <option value="PE">Perú</option>
+    <option value="PN">Pitcairn</option>
+    <option value="PF">Polinesia Francesa</option>
+    <option value="PL">Polonia</option>
+    <option value="PT">Portugal</option>
+    <option value="PR">Puerto Rico</option>
+    <option value="GB">Reino Unido</option>
+    <option value="CF">República Centroafricana</option>
+    <option value="LA">República Democrática Popular de Lao</option>
+    <option value="DO">República Dominicana</option>
+    <option value="SY">República árabe de Siria</option>
+    <option value="RE">Reunión</option>
+    <option value="RW">Ruanda</option>
+    <option value="RO">Rumanía</option>
+    <option value="EH">Sahara Occidental</option>
+    <option value="AS">Samoa Estadounidense</option>
+    <option value="WS">Samoa</option>
+    <option value="BL">San Bartolomé</option>
+    <option value="KN">San Cristóbal y Nieves</option>
+    <option value="SM">San Marino</option>
+    <option value="MF">San Martín (zona francesa)</option>
+    <option value="PM">San Pedro y Miquelon</option>
+    <option value="VC">San Vicente y las Granadinas</option>
+    <option value="SH">Santa Elena, Ascensión y Tristán de Acuña</option>
+    <option value="LC">Santa Lucía</option>
+    <option value="VA">Santa Sede (Ciudad Estado del Vaticano)</option>
+    <option value="ST">Santo Tomé y Príncipe</option>
+    <option value="SN">Senegal</option>
+    <option value="RS">Serbia</option>
+    <option value="SC">Seychelles</option>
+    <option value="SL">Sierra Leona</option>
+    <option value="SG">Singapur</option>
+    <option value="SO">Somalia</option>
+    <option value="LK">Sri Lanka</option>
+    <option value="SZ">Suazilandia</option>
+    <option value="ZA">Sudáfrica</option>
+    <option value="SS">Sudán del Sur</option>
+    <option value="SD">Sudán</option>
+    <option value="SE">Suecia</option>
+    <option value="CH">Suiza</option>
+    <option value="SR">Surinám</option>
+    <option value="SJ">Svalbard y Jan Mayen</option>
+    <option value="TH">Tailandia</option>
+    <option value="TW">Taiwán</option>
+    <option value="TZ">Tanzania</option>
+    <option value="TJ">Tayikistán</option>
+    <option value="IO">Territorio Británico del Océano Índico</option>
+    <option value="TF">Territorios Franceses del Sur</option>
+    <option value="TL">Timor Oriental</option>
+    <option value="TG">Togo</option>
+    <option value="TK">Tokelau</option>
+    <option value="TO">Tonga</option>
+    <option value="TT">Trinidad y Tobago</option>
+    <option value="TN">Tunez</option>
+    <option value="TM">Turkmenistán</option>
+    <option value="TR">Turquía</option>
+    <option value="TV">Tuvalu</option>
+    <option value="UA">Ucrania</option>
+    <option value="UG">Uganda</option>
+    <option value="UY">Uruguay</option>
+    <option value="UZ">Uzbekistán</option>
+    <option value="VU">Vanuatu</option>
+    <option value="VE">Venezuela</option>
+    <option value="VN">Vietnam</option>
+    <option value="WF">Wallis y Futuna</option>
+    <option value="YE">Yemen</option>
+    <option value="DJ">Yibuti</option>
+    <option value="ZM">Zambia</option>
+    <option value="ZW">Zimbabue</option></select><div class="chosen-container chosen-container-single" title="" id="project_country_chosen" style="width: 300px;"><a class="chosen-single" original_title="">
+      <input class="chosen-focus-input" type="text" autocomplete="off">
+      <span>México</span>
+      <div><b></b></div>
+    </a>
+    <div class="chosen-drop">
+      <div class="chosen-search">
+        <input class="chosen-search-input" type="text" autocomplete="off">
+      </div>
+      <ul class="chosen-results"></ul>
+    </div></div>
+    </div>
+    </div></div><div class="present_dictrict_type" type_district="true">
+    <div class="control-group string required project_department"><label class="string required control-label" for="project_department"><abbr title="requerido">*</abbr> Departamento</label><div class="controls"><div class="inline" id="location_department_code_wrapper">
+    <select name="project[department]" id="project_department" class="chosen-select"><option value="">- Seleccione -</option>
+    <option value="AGU">Aguascalientes</option>
+    <option value="BCN">Baja California</option>
+    <option value="BCS">Baja California Sur</option>
+    <option value="CAM">Campeche</option>
+    <option value="CHH">Chihuahua</option>
+    <option value="CHP">Chiapas</option>
+    <option value="CMX">Ciudad de México</option>
+    <option value="COA">Coahuila de Zaragoza</option>
+    <option value="COL">Colima</option>
+    <option value="DUR">Durango</option>
+    <option value="GRO">Guerrero</option>
+    <option value="GUA">Guanajuato</option>
+    <option value="HID">Hidalgo</option>
+    <option value="JAL">Jalisco</option>
+    <option value="MEX">México</option>
+    <option value="MIC">Michoacán de Ocampo</option>
+    <option value="MOR">Morelos</option>
+    <option value="NAY">Nayarit</option>
+    <option value="NLE">Nuevo León</option>
+    <option value="OAX">Oaxaca</option>
+    <option value="PUE">Puebla</option>
+    <option value="QUE">Querétaro</option>
+    <option value="ROO">Quintana Roo</option>
+    <option value="SIN">Sinaloa</option>
+    <option value="SLP">San Luis Potosí</option>
+    <option value="SON">Sonora</option>
+    <option value="TAB">Tabasco</option>
+    <option value="TAM">Tamaulipas</option>
+    <option value="TLA">Tlaxcala</option>
+    <option value="VER">Veracruz de Ignacio de la Llave</option>
+    <option value="YUC">Yucatán</option>
+    <option value="ZAC">Zacatecas</option></select><div class="chosen-container chosen-container-single" title="" id="project_department_chosen" style="width: 300px;"><a class="chosen-single" original_title="">
+      <input class="chosen-focus-input" type="text" autocomplete="off">
+      <span>- Seleccione -</span>
+      <div><b></b></div>
+    </a>
+    <div class="chosen-drop">
+      <div class="chosen-search">
+        <input class="chosen-search-input" type="text" autocomplete="off">
+      </div>
+      <ul class="chosen-results"></ul>
+    </div></div>
+    <!-- = subregion_select (locationable, tag_name_subregion, parent_region, priority: [priority_subregion]) -->
+    
+    </div>
+    </div></div></div>
+    <div class="control-group string required project_province"><label class="string required control-label" for="project_province"><abbr title="requerido">*</abbr> <span class="translation_missing" title="translation missing: es-PE.frontend.ubigeo.label.County">County</span></label><div class="controls"><div class="inline" id="location_province_code_wrapper">
+    <select name="project[province]" id="project_province" class="chosen-select"><option value="">- Seleccione -</option>
+    <option value="12600318">Acambay</option>
+    <option value="12600319">Acolman</option>
+    <option value="12600320">Aculco</option>
+    <option value="12600321">Almoloya de alquisiras</option>
+    <option value="12600322">Almoloya de juarez</option>
+    <option value="12600323">Almoloya del rio</option>
+    <option value="12600324">Amanalco</option>
+    <option value="12600325">Amatepec</option>
+    <option value="12600326">Amecameca</option>
+    <option value="12600327">Apaxco</option>
+    <option value="12600328">Atenco</option>
+    <option value="12600329">Atizapan</option>
+    <option value="12600330">Atizapan de zaragoza</option>
+    <option value="12600331">Atlacomulco</option>
+    <option value="12600332">Atlautla</option>
+    <option value="12600333">Axapusco</option>
+    <option value="12600334">Ayapango</option>
+    <option value="12600335">Calimaya</option>
+    <option value="12600336">Capulhuac</option>
+    <option value="12600337">Chalco</option>
+    <option value="12600338">Chapa de mota</option>
+    <option value="12600339">Chapultepec</option>
+    <option value="12600340">Chiautla</option>
+    <option value="12600341">Chicoloapan</option>
+    <option value="12600342">Chiconcuac</option>
+    <option value="12600343">Chimalhuacan</option>
+    <option value="12600344">Coacalco de berriozabal</option>
+    <option value="12600345">Coatepec harinas</option>
+    <option value="12600346">Cocotitlan</option>
+    <option value="12600347">Coyotepec</option>
+    <option value="12600348">Cuautitlan</option>
+    <option value="12600349">Cuautitlan izcalli</option>
+    <option value="12600350">Donato guerra</option>
+    <option value="12600351">Ecatepec</option>
+    <option value="12600352">Ecatzingo</option>
+    <option value="12600353">El oro</option>
+    <option value="12600354">Huehuetoca</option>
+    <option value="12600355">Hueypoxtla</option>
+    <option value="12600356">Huixquilucan</option>
+    <option value="12600357">Isidro fabela</option>
+    <option value="12600358">Ixtapaluca</option>
+    <option value="12600359">Ixtapan de la sal</option>
+    <option value="12600360">Ixtapan del oro</option>
+    <option value="12600361">Ixtlahuaca</option>
+    <option value="12600363">Jaltenco</option>
+    <option value="12600364">Jilotepec</option>
+    <option value="12600365">Jilotzingo</option>
+    <option value="12600366">Jiquipilco</option>
+    <option value="12600367">Jocotitlan</option>
+    <option value="12600368">Joquicingo</option>
+    <option value="12600369">Juchitepec</option>
+    <option value="12600370">La paz</option>
+    <option value="12600371">Lerma</option>
+    <option value="28358270">Luvianos</option>
+    <option value="12600372">Malinalco</option>
+    <option value="12600373">Melchor ocampo</option>
+    <option value="12600374">Metepec</option>
+    <option value="12600375">Mexicaltzingo</option>
+    <option value="12600376">Morelos</option>
+    <option value="12600377">Naucalpan de juarez</option>
+    <option value="12600378">Nextlalpan</option>
+    <option value="12600379">Nezahualcoyotl</option>
+    <option value="12600380">Nicolas romero</option>
+    <option value="12600381">Nopaltepec</option>
+    <option value="12600382">Ocoyoacac</option>
+    <option value="12600383">Ocuilan</option>
+    <option value="12600384">Otumba</option>
+    <option value="12600385">Otzoloapan</option>
+    <option value="12600386">Otzolotepec</option>
+    <option value="12600387">Ozumba</option>
+    <option value="12600388">Papalotla</option>
+    <option value="12600389">Polotitlan</option>
+    <option value="12600390">Rayon</option>
+    <option value="12600391">San antonio la isla</option>
+    <option value="12600392">San felipe del progreso</option>
+    <option value="55921239">San jose del rincon</option>
+    <option value="12600393">San martin de las piramides</option>
+    <option value="12600394">San mateo atenco</option>
+    <option value="12600395">San simon de guerrero</option>
+    <option value="12600396">Santo tomas</option>
+    <option value="12600398">Soyaniquilpan de juarez</option>
+    <option value="12600399">Sultepec</option>
+    <option value="12600400">Tecamac</option>
+    <option value="12600401">Tejupilco</option>
+    <option value="12600402">Temamatla</option>
+    <option value="12600403">Temascalapa</option>
+    <option value="12600404">Temascalcingo</option>
+    <option value="12600405">Temascaltepec</option>
+    <option value="12600406">Temoaya</option>
+    <option value="12600407">Tenancingo</option>
+    <option value="12600408">Tenango del aire</option>
+    <option value="12600409">Tenango del valle</option>
+    <option value="12600410">Teoloyucan</option>
+    <option value="12600411">Teotihuacan</option>
+    <option value="12600412">Tepetlaoxtoc</option>
+    <option value="12600413">Tepetlixpa</option>
+    <option value="12600414">Tepotzotlan</option>
+    <option value="12600415">Tequixquiac</option>
+    <option value="12600416">Texcaltitlan</option>
+    <option value="12600417">Texcalyacac</option>
+    <option value="12600418">Texcoco</option>
+    <option value="12600419">Tezoyuca</option>
+    <option value="12600420">Tianguistenco</option>
+    <option value="12600421">Timilpan</option>
+    <option value="12600422">Tlalmanalco</option>
+    <option value="12600423">Tlalnepantla de baz</option>
+    <option value="12600424">Tlatlaya</option>
+    <option value="12600425">Toluca</option>
+    <option value="28358272">Tonanitla</option>
+    <option value="12600426">Tonatico</option>
+    <option value="12600427">Tultepec</option>
+    <option value="12600428">Tultitlan</option>
+    <option value="12600429">Valle de bravo</option>
+    <option value="12600397">Valle de chalco solidaridad</option>
+    <option value="12600430">Villa de allende</option>
+    <option value="12600431">Villa del carbon</option>
+    <option value="12600432">Villa guerrero</option>
+    <option value="12600433">Villa victoria</option>
+    <option value="12600362">Xalatlaco</option>
+    <option value="12600434">Xonacatlan</option>
+    <option value="12600436">Zacualpan</option>
+    <option value="12600437">Zinacantepec</option>
+    <option value="12600438">Zumpahuacan</option>
+    <option value="12600439">Zumpango</option></select><div class="chosen-container chosen-container-single" title="" id="project_province_chosen" style="width: 300px;"><a class="chosen-single" original_title="">
+      <input class="chosen-focus-input" type="text" autocomplete="off">
+      <span>- Seleccione -</span>
+      <div><b></b></div>
+    </a>
+    <div class="chosen-drop">
+      <div class="chosen-search">
+        <input class="chosen-search-input" type="text" autocomplete="off">
+      </div>
+      <ul class="chosen-results"></ul>
+    </div></div>
+    
+    </div>
+    </div></div><div class="control-group integer required project_district"><label class="integer required control-label" for="project_district"><abbr title="requerido">*</abbr> <span class="translation_missing" title="translation missing: es-PE.frontend.ubigeo.label.Town">Town</span></label><div class="controls"><div class="inline" id="location_district_code_wrapper">
+    <select name="project[district]" id="project_district" class="chosen-select"><option value="">- Seleccione -</option>
+    <option value="55906671">Aviacion autopan</option>
+    <option value="55895801">Barrio santa cruz</option>
+    <option value="114011">Cacalomacíçn</option>
+    <option value="114207">Calixtlahuaca</option>
+    <option value="55891350">Cerrillo vista hermosa</option>
+    <option value="55903426">Ejido de caí±aleja</option>
+    <option value="55891354">Ejido la y seccion 7ma revolucií_n</option>
+    <option value="55897095">Ejido san marcos yachihuacaltepec</option>
+    <option value="119662">El cerrillo</option>
+    <option value="55886413">Ex hacienda de abajo</option>
+    <option value="55889371">Jicaltepec autopan</option>
+    <option value="55893244">La constitucion</option>
+    <option value="55886027">La joya</option>
+    <option value="55887688">La palma</option>
+    <option value="135659">Palmillas</option>
+    <option value="55913685">San andres cuexcontitlan</option>
+    <option value="55889518">San antonio buenavista</option>
+    <option value="142048">San buenaventura</option>
+    <option value="55895286">San cayetano morelos</option>
+    <option value="55889043">San diego de los padres cuexcontitl</option>
+    <option value="142234">San diego linares</option>
+    <option value="55888692">San felipe tlalmimilolpan</option>
+    <option value="55903443">San jose guadalupe</option>
+    <option value="144157">San lorenzo tepaltitlíçn</option>
+    <option value="55890955">San marcos yachihuacaltepec</option>
+    <option value="55895954">San martin totoltepec</option>
+    <option value="55893042">San mateo otzacatipan</option>
+    <option value="55896736">San miguel totoltepec</option>
+    <option value="55886471">San nicolas tolentino</option>
+    <option value="144873">San pablo autopan</option>
+    <option value="55889439">San pedro totoltepec</option>
+    <option value="55903438">Santa cruz otzacatipan</option>
+    <option value="55889872">Santa julia</option>
+    <option value="55886306">Santiago tlacotepec</option>
+    <option value="55891153">Sixto rodriguez</option>
+    <option value="55886053">Tlachaloya 1ra secc</option>
+    <option value="55889388">Tlachaloya 2da secc</option>
+    <option value="149769">Toluca de lerdo</option></select><div class="chosen-container chosen-container-single" title="" id="project_district_chosen" style="width: 300px;"><a class="chosen-single" original_title="">
+      <input class="chosen-focus-input" type="text" autocomplete="off">
+      <span>- Seleccione -</span>
+      <div><b></b></div>
+    </a>
+    <div class="chosen-drop">
+      <div class="chosen-search">
+        <input class="chosen-search-input" type="text" autocomplete="off">
+      </div>
+      <ul class="chosen-results"></ul>
+    </div></div>
+    
+    </div>
+    </div></div><div class="control-group string required project_address"><label class="string required control-label" for="project_address"><abbr title="requerido">*</abbr> Dirección</label><div class="controls"><input class="string required" required="required" aria-required="true" type="text" name="project[address]" id="project_address"><a class="validation info-icon" original_title="Calle, número de casa, departamento, etc."></a></div></div>
+    </fieldset>
+    <fieldset id="embebed_unit" style="display: none;">
+    <legend>Comercial</legend>
+    <div class="control-group select required project_units_commercial_status"><label class="select required control-label" for="project_units_attributes_0_commercial_status_id"><abbr title="requerido">*</abbr> Estado comercial</label><div class="controls"><select class="select required" name="project[units_attributes][0][commercial_status_id]" id="project_units_attributes_0_commercial_status_id"><option selected="selected" value="1">Disponible</option>
+    <option value="2">No Disponible</option></select><a class="validation info-icon" original_title="Estado relacionado a la venta del inmueble."></a></div></div>
+    </fieldset>
+    <fieldset>
+    <legend>Garantía</legend>
+    <div class="control-group datepicker optional project_warranty_start_date_finishes"><label class="datepicker optional control-label" for="project_warranty_start_date_finishes">Fecha de inicio de garantía de acabados</label><div class="controls"><input class="datepicker optional hasDatepicker" type="text" name="project[warranty_start_date_finishes]" id="project_warranty_start_date_finishes" autocomplete="off" placeholder="dd-mm-yyyy"></div></div>
+    <div class="control-group">
+    <label class="integer optional control-label" for="project_warranty_year">Duración de Garantía estructural</label>
+    <div class="controls">
+    <div class="control-group select optional project_warranty_year"><div class="controls"><select class="select optional" name="project[warranty_year]" id="project_warranty_year"><option selected="selected" value="0">0 años</option>
+    <option value="1">1 año</option>
+    <option value="2">2 años</option>
+    <option value="3">3 años</option>
+    <option value="4">4 años</option>
+    <option value="5">5 años</option>
+    <option value="6">6 años</option>
+    <option value="7">7 años</option>
+    <option value="8">8 años</option>
+    <option value="9">9 años</option>
+    <option value="10">10 años</option></select></div></div>
+    <div class="control-group select optional project_warranty_month"><div class="controls"><select class="select optional" name="project[warranty_month]" id="project_warranty_month"><option selected="selected" value="0">0 meses</option>
+    <option value="1">1 mes</option>
+    <option value="2">2 meses</option>
+    <option value="3">3 meses</option>
+    <option value="4">4 meses</option>
+    <option value="5">5 meses</option>
+    <option value="6">6 meses</option>
+    <option value="7">7 meses</option>
+    <option value="8">8 meses</option>
+    <option value="9">9 meses</option>
+    <option value="10">10 meses</option>
+    <option value="11">11 meses</option></select></div></div>
+    </div>
+    </div>
+    <div class="control-group datepicker optional project_warranty_at"><label class="datepicker optional control-label" for="project_warranty_at">Fecha de inicio de garantía estructural</label><div class="controls"><input class="datepicker optional hasDatepicker" type="text" name="project[warranty_at]" id="project_warranty_at" autocomplete="off" placeholder="dd-mm-yyyy"></div></div>
+    <div class="control-group">
+    <label class="integer optional control-label" for="project_warranty_duration_finishes_year">Duración de Garantía de acabados</label>
+    <div class="controls">
+    <div class="control-group select optional project_warranty_duration_finishes_year"><div class="controls"><select class="select optional" name="project[warranty_duration_finishes_year]" id="project_warranty_duration_finishes_year"><option selected="selected" value="0">0 años</option>
+    <option value="1">1 año</option>
+    <option value="2">2 años</option>
+    <option value="3">3 años</option>
+    <option value="4">4 años</option>
+    <option value="5">5 años</option>
+    <option value="6">6 años</option>
+    <option value="7">7 años</option>
+    <option value="8">8 años</option>
+    <option value="9">9 años</option>
+    <option value="10">10 años</option></select></div></div>
+    <div class="control-group select optional project_warranty_duration_finishes_month"><div class="controls"><select class="select optional" name="project[warranty_duration_finishes_month]" id="project_warranty_duration_finishes_month"><option selected="selected" value="0">0 meses</option>
+    <option value="1">1 mes</option>
+    <option value="2">2 meses</option>
+    <option value="3">3 meses</option>
+    <option value="4">4 meses</option>
+    <option value="5">5 meses</option>
+    <option value="6">6 meses</option>
+    <option value="7">7 meses</option>
+    <option value="8">8 meses</option>
+    <option value="9">9 meses</option>
+    <option value="10">10 meses</option>
+    <option value="11">11 meses</option></select></div></div>
+    </div>
+    </div>
+    <div class="control-group">
+    <label class="integer optional control-label" for="project_warranty_duration_commercial_year">Duración de Garantía Comercial</label>
+    <div class="controls">
+    <div class="control-group select optional project_warranty_duration_commercial_year"><div class="controls"><select class="select optional" name="project[warranty_duration_commercial_year]" id="project_warranty_duration_commercial_year"><option selected="selected" value="0">0 años</option>
+    <option value="1">1 año</option>
+    <option value="2">2 años</option>
+    <option value="3">3 años</option>
+    <option value="4">4 años</option>
+    <option value="5">5 años</option>
+    <option value="6">6 años</option>
+    <option value="7">7 años</option>
+    <option value="8">8 años</option>
+    <option value="9">9 años</option>
+    <option value="10">10 años</option></select></div></div>
+    <div class="control-group select optional project_warranty_duration_commercial_month"><div class="controls"><select class="select optional" name="project[warranty_duration_commercial_month]" id="project_warranty_duration_commercial_month"><option selected="selected" value="0">0 meses</option>
+    <option value="1">1 mes</option>
+    <option value="2">2 meses</option>
+    <option value="3">3 meses</option>
+    <option value="4">4 meses</option>
+    <option value="5">5 meses</option>
+    <option value="6">6 meses</option>
+    <option value="7">7 meses</option>
+    <option value="8">8 meses</option>
+    <option value="9">9 meses</option>
+    <option value="10">10 meses</option>
+    <option value="11">11 meses</option></select></div></div>
+    </div>
+    </div>
+    </fieldset>
+    <fieldset>
+    <legend>Datos de la razón social</legend>
+    <div class="control-group integer optional project_company_id"><label class="integer optional control-label" for="project_company_id">Razón social</label><div class="controls"><select name="project[company_id]" id="project_company_id"><option value=""> - Razón social - </option>
+    <option value="2"></option>
+    <option value="1">Inmobiliaria Chong &amp; Jhong S.A.C</option></select>
+    </div></div></fieldset>
+    <script>
+      Remote.Chosen('#project_currency')
+      Remote.Chosen('#project_owner_id')
+      Remote.Chosen('#project_venture_type_id')
+      Remote.Chosen('#project_contact_id')
+      Remote.Chosen('#project_construction_status_id')
+      Remote.Chosen('#project_country')
+      Remote.Chosen('#project_department')
+      Remote.Chosen('#project_province')
+      Remote.Chosen('#project_district')
+      Remote.Chosen('#project_bank_ids')
+      Location.Init()
+    </script>
+    
+    <div class="footer-main">
+    <div class="form-actions">
+    <input type="submit" name="commit" value="Crear Proyecto" class="btn__primary" data-disable-with="Crear Proyecto">
+    </div>
+    </div>
+    </div>
+    <div class="tab-content" id="tab2" style="display: none;">
+    <fieldset>
+    <legend>
+    Area
+    </legend>
+    <table class="survey-table-form">
+    <tbody>
+    <tr>
+    <td>
+    <label class=" control-label" for="area_comun">Area comun</label>
+    </td>
+    <td>
+    <input value="area_comun" autocomplete="off" type="hidden" name="project[additional_fields_attributes][3][name]" id="project_additional_fields_attributes_3_name">
+    <span class="field-in"><input value="" type="text" name="project[additional_fields_attributes][3][value]" id="project_additional_fields_attributes_3_value"></span>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </fieldset>
+    
+    <fieldset>
+    <legend>
+    Referenciales
+    </legend>
+    <table class="survey-table-form">
+    <tbody>
+    <tr>
+    <td>
+    <label class="required_extra control-label" for="anos_de_la_vivienda">Años de la vivienda</label>
+    </td>
+    <td>
+    <input value="anos_de_la_vivienda" autocomplete="off" type="hidden" name="project[additional_fields_attributes][4][name]" id="project_additional_fields_attributes_4_name">
+    <span class="field-in"><input value="" required="required" type="text" name="project[additional_fields_attributes][4][value]" id="project_additional_fields_attributes_4_value"></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label class=" control-label" for="se_encuentra_ocupada">¿Se encuentra ocupada?</label>
+    </td>
+    <td>
+    <input value="se_encuentra_ocupada" autocomplete="off" type="hidden" name="project[additional_fields_attributes][5][name]" id="project_additional_fields_attributes_5_name">
+    <span class="field-in"><select prompt="Seleccione una opción" name="project[additional_fields_attributes][5][value]" id="project_additional_fields_attributes_5_value"><option value="" label=" "></option>
+    <option value="Si">Si</option>
+    <option value="No">No</option></select></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label class=" control-label" for="se_trata_de">El inmueble se dara en:</label>
+    </td>
+    <td>
+    <input value="se_trata_de" autocomplete="off" type="hidden" name="project[additional_fields_attributes][6][name]" id="project_additional_fields_attributes_6_name">
+    <span class="field-in"><select prompt="Seleccione una opción" name="project[additional_fields_attributes][6][value]" id="project_additional_fields_attributes_6_value"><option value="" label=" "></option>
+    <option value="Alquiler">Alquiler</option>
+    <option value="Venta">Venta</option></select></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label class=" control-label" for="logo_proyecto">Logo proyecto</label>
+    </td>
+    <td>
+    <input value="logo_proyecto" autocomplete="off" type="hidden" name="project[additional_fields_attributes][7][name]" id="project_additional_fields_attributes_7_name">
+    <span class="field-in"><input value="" type="text" name="project[additional_fields_attributes][7][value]" id="project_additional_fields_attributes_7_value"></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label class=" control-label" for="cuenta_proyecto">Cuenta proyecto</label>
+    </td>
+    <td>
+    <input value="cuenta_proyecto" autocomplete="off" type="hidden" name="project[additional_fields_attributes][8][name]" id="project_additional_fields_attributes_8_name">
+    <span class="field-in"><input value="" type="text" name="project[additional_fields_attributes][8][value]" id="project_additional_fields_attributes_8_value"></span>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </fieldset>
+    
+    <fieldset>
+    <legend>
+    Como Llegar
+    </legend>
+    <table class="survey-table-form">
+    <tbody>
+    <tr>
+    <td>
+    <label class=" control-label" for="referencias">Referencias de la Unidad</label>
+    </td>
+    <td>
+    <input value="referencias" autocomplete="off" type="hidden" name="project[additional_fields_attributes][9][name]" id="project_additional_fields_attributes_9_name">
+    <span class="field-in"><textarea name="project[additional_fields_attributes][9][value]" id="project_additional_fields_attributes_9_value"></textarea></span>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </fieldset>
+    
+    <fieldset>
+    <legend>
+    Banco Predeterminado
+    </legend>
+    <table class="survey-table-form">
+    <tbody>
+    <tr>
+    <td>
+    <label class=" control-label" for="banco_predeterminado">Banco predeterminado</label>
+    </td>
+    <td>
+    <input value="banco_predeterminado" autocomplete="off" type="hidden" name="project[additional_fields_attributes][10][name]" id="project_additional_fields_attributes_10_name">
+    <span class="field-in"><input value="" type="text" name="project[additional_fields_attributes][10][value]" id="project_additional_fields_attributes_10_value"></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label class=" control-label" for="area_total_proyecto">Area total proyecto</label>
+    </td>
+    <td>
+    <input value="area_total_proyecto" autocomplete="off" type="hidden" name="project[additional_fields_attributes][11][name]" id="project_additional_fields_attributes_11_name">
+    <span class="field-in"><input value="" type="text" name="project[additional_fields_attributes][11][value]" id="project_additional_fields_attributes_11_value"></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label class=" control-label" for="expediente_tecnico">Expediente tecnico</label>
+    </td>
+    <td>
+    <input value="expediente_tecnico" autocomplete="off" type="hidden" name="project[additional_fields_attributes][12][name]" id="project_additional_fields_attributes_12_name">
+    <span class="field-in"><input value="" type="text" name="project[additional_fields_attributes][12][value]" id="project_additional_fields_attributes_12_value"></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label class=" control-label" for="fecha_expediente_tecnico">Fecha expediente tecnico</label>
+    </td>
+    <td>
+    <input value="fecha_expediente_tecnico" autocomplete="off" type="hidden" name="project[additional_fields_attributes][13][name]" id="project_additional_fields_attributes_13_name">
+    <span class="field-in"><input value="" type="text" name="project[additional_fields_attributes][13][value]" id="project_additional_fields_attributes_13_value"></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label class=" control-label" for="ficha_registro">Ficha registro</label>
+    </td>
+    <td>
+    <input value="ficha_registro" autocomplete="off" type="hidden" name="project[additional_fields_attributes][14][name]" id="project_additional_fields_attributes_14_name">
+    <span class="field-in"><input value="" type="text" name="project[additional_fields_attributes][14][value]" id="project_additional_fields_attributes_14_value"></span>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </fieldset>
+    
+    <div class="footer-main block left">
+    <input type="submit" name="commit" value="Crear Proyecto" class="btn__primary" disable_with="Procesando..." data-disable-with="Crear Proyecto">
+    <div class="clear"></div>
+    </div>
+    <script>
+      Remote.multipleSelect(".multiselect_checkboxes_projects");
+      $('.custom_datepicker').datepicker({
+        altFormat: "yy-mm-dd",
+        dateFormat: "yy-mm-dd"
+      })
+    </script>
+    
+    </div>
+    <div class="tab-content" id="tab8" style="display: none;">
+    <fieldset>
+    <legend>Social</legend>
+    <div class="control-group url optional project_facebook_url"><label class="url optional control-label" for="project_facebook_url">Facebook</label><div class="controls"><input type="text" class="string url optional" name="project[facebook_url]" id="project_facebook_url"></div></div>
+    <div class="control-group url optional project_youtube_channel_url"><label class="url optional control-label" for="project_youtube_channel_url">Canal Youtube</label><div class="controls"><input type="text" class="string url optional" name="project[youtube_channel_url]" id="project_youtube_channel_url"></div></div>
+    <div class="control-group url optional project_tour_virtual_url"><label class="url optional control-label" for="project_tour_virtual_url">Guía Virtual</label><div class="controls"><input type="text" class="string url optional" name="project[tour_virtual_url]" id="project_tour_virtual_url"></div></div>
+    <div class="control-group url optional project_website_url"><label class="url optional control-label" for="project_website_url">Página Web</label><div class="controls"><input type="text" class="string url optional" name="project[website_url]" id="project_website_url"></div></div>
+    </fieldset>
+    
+    </div>
+    </form>
+  </div>
+</body>
+{% endblock %}  

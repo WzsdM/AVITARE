@@ -1,0 +1,42 @@
+:root {
+	--primary: rgb(0, 128, 0);
+	--darkprimary: rgb(0, 88, 0);
+	--white: rgb(255, 255, 255);
+	--lightgray:rgb(211, 211, 211);
+	--gray:rgb(128, 128, 128);
+  }
+*{
+	margin: 0;
+	padding: 0;
+	font-family: verdana, sans-serif;
+}
+a{
+	font-style: none;
+	text-decoration: none;
+	color: var(--white);
+}
+
+.upnavbar{
+	border-bottom-color: var(--gray);
+}
+
+.btnAnyadir{
+	border-radius: 1em;
+	background: var(--darkprimary);
+	padding: 1.5em;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+.bi-patch-plus-fill {
+    display: flex;
+    transition: ease-in-out;
+    margin-top: 1vh;
+    font-size: 4vh;
+    transition-duration: .5s;
+    translate: 0px 100px;
+    justify-content: center;
+}
+.btnAnyadir:hover > .bi-patch-plus-fill{
+	translate: 0px 0px;
+}

@@ -1,0 +1,32 @@
+{% extends 'menu.html' %}
+{% load static %}
+{% block content %}
+
+    <link rel="stylesheet" type="text/css" href="{%static 'css/unidades.css'%}">
+	<div class="containerTableUnidades container my-4" id="app">
+        <div class="row">
+        	<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        		<table class="table" id="dataTable_Unidades">
+        			<thead>
+        				<tr>
+        					<th class="centered">#</th>
+        					<th class="centered">Código</th>
+        					<th class="centered">Nombre</th>
+        					<th class="centered">Etapa</th>
+        					<th class="centered">Manzana</th>
+        					<th class="centered">Lote</th>
+        					<th class="centered">Proyecto</th>
+        					<th class="centered">Estado</th>
+        					<th class="centered">Precio</th>
+        				</tr>
+        			</thead>
+                    <tbody id="tBody_Unidades">
+                    	
+                    </tbody>
+        		</table>
+        	</div>
+        </div>
+    </div>
+	<script type="text/javascript" src="{%static 'scripts/unidades.js'%}"></script>
+
+{%endblock content%}
