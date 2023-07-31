@@ -8,5 +8,7 @@ def crearProyecto(request):
     return render(request,'crearproyecto.html')
 def unidades(request):
     return render(request,'unidades.html')
+def login(request):
+    return render(request,'login.html')
 
 # Create your views here.

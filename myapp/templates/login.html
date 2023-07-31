@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+	<link rel="icon" type="image/gif" href="{%static 'img/justLogo.png'%}" sizes="16*16"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/login.css'%}">
+	
+	<title>Login - Avitare</title>
+
+	<script src={% static 'scripts/login.js' %} type="module"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</head>
+<body class="">
+	<div class="login">
+
+		<div class="login__container">
+			<div class="login__containerSession">
+				<a class="login__logoCompanyContainer" href="/">
+					<img width="auto" height="50" alt="Logo Eternia Soft" src="{% static 'img/logo.png' %}" />
+				</a>
+				<div class="login__formContainer">
+					<h1 class="login__title">Iniciar sesión</h1>
+					<p class="login__subtitle">Ingresa tu usuario y contraseña para iniciar sesión</p>
+					<form class="simple_form session"  id="login-form">
+						<input type="hidden" name="authenticity_token" value="zwV1EAwyeuXIrgIJAykiJPXXvuEDi1lLpQlGr7lggxIQszMMmE6aphJabaHwUPcFcbiQg1KHbKIpiSep3HAKEg" autocomplete="off">
+						<div class="control-group string required session_login">
+							<label class="string required control-label" for="session_login">
+								<abbr title="requerido">*</abbr> Usuario
+							</label>
+							<div class="controls">
+								<input class="string required" autofocus="autofocus" required="required" aria-required="true" placeholder="Ingresar usuario" type="text" name="session[login]" id="session_login">
+							</div>
+						</div>
+						<div class="control-group password required session_password">
+							<label class="password required control-label" for="session_password">
+								<abbr title="requerido">*</abbr> Contraseña
+							</label>
+							<div class="controls">
+								<input autocomplete="off" class="password required" required="required" aria-required="required" placeholder="Ingresar contraseña" type="password" name="session[password]" id="session_password">
+							</div>
+						</div>
+						<div class="login__forget">
+							<a href="/users/passwords/new">¿Olvidaste tu contraseña?</a>
+
+						</div>
+						<input type="submit" name="commit" value="Entrar" class="btn__primary" data-disable-with="Entrar">
+					</form></div>
+				</div>
+
+				<div class="login__buildingContainer">
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="footer__logoContainer">
+				<span class="footer__separator"></span>
+				<span class="footer__text">@2023 - Avitare Software. Todos los derechos reservados</span>
+			</div>
+		</footer>
+
+
+		<div id="pet-d911af300707d4" class=" spriteling" style="top: 110.56px; left: 862.96px; display: none; width: 64px; height: 64px; background-image: url(&quot;chrome-extension://ifaicffibnedodkbekogndkdfeojcofb/assets/cats/black/black_512x512_8x8.png&quot;); background-position: -128px -320px;"></div>
+	</body>
+	</html>
