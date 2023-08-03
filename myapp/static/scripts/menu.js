@@ -1,4 +1,5 @@
 // Esconder menú lateral
+
 const iconoMenu = document.getElementById('iconmenu');
 const menu = document.getElementById('menulateral');
 const content = document.getElementById('content');
@@ -39,6 +40,7 @@ openModal.addEventListener('click', (e)=>{
         iconAyuda.setAttribute('class','bi bi-chevron-down');
     }
 });
+
 
 // Modal Usuario
 const openModalUser = document.getElementById('usuario');

@@ -5,8 +5,8 @@ export function showMessage(message,type="success"){
         destination: "",
         newWindow: true,
         close: false,
-        gravity: "top", // `top` or `bottom`
-        position: "left", // `left`, `center` or `right`
+        gravity: "bottom", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
           background: type==="success" ? "green" : "red",

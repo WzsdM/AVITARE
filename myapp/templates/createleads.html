@@ -1,0 +1,165 @@
+{% extends 'menu.html' %}
+{% load static %}
+{% block content%}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/leads.css' %}">   
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<body style="overflow-x: hidden;">
+	<form class="jotform-form" method="post" action="" name="form_232130335455649" id="232130335455649" accept-charset="utf-8" ><input type="hidden" name="formID" value="232130335455649"><input type="hidden" id="JWTContainer" value="" placeholder="">
+		<div role="main" class="form-all">
+			<ul class="form-section page-section">
+				<li id="cid_14" class="form-input-wide" data-type="control_head">
+					<div class="form-header-group  header-large">
+						<div class="header-text httac htvam">
+							<h1 id="header_14" class="form-header" data-component="header">Nuevo Cliente</h1>
+						</div>
+					</div>
+				</li>
+				<li class="form-line" data-type="control_fullname" id="id_105"><label class="form-label form-label-top form-label-auto" id="label_105" for="first_105"> Nombres Completos </label>
+					<div id="cid_105" class="form-input-wide" data-layout="full">
+						<div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+							<input type="text" id="first_105" class="form-textbox" data-component="first" aria-labelledby="label_105 sublabel_105_first" placeholder="" required ><label class="form-sub-label" for="first_105" id="sublabel_105_first" style="min-height:13px" aria-hidden="false">Nombres</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_105" name="q105_name105[last]" class="form-textbox" data-component="last" aria-labelledby="label_105 sublabel_105_last" placeholder="" required ><label class="form-sub-label" for="last_105" id="sublabel_105_last" style="min-height:13px" aria-hidden="false">Apellidos</label></span></div>
+					</div>
+				</li>
+				<li class="form-line" data-type="control_phone" id="id_112"><label class="form-label form-label-top form-label-auto" id="label_112" for="input_112_full"> Número de teléfono </label>
+					<div id="cid_112" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top">
+						
+						<script>
+							function validaNumericos(event) {
+								if(event.charCode >= 48 && event.charCode <= 57){
+								  return true;
+								 }
+								 return false;        
+							}
+						</script>
+						
+						<input id="input_112_full"  class="mask-phone-number form-textbox" style="width:310px"   placeholder="000-000-000" data-component="phone" type="text" onkeypress='return validaNumericos(event)'aria-labelledby="label_112 sublabel_112_masked" inputmode="number" required maxlength="9" minlenght="9">
+						
+						<label class="form-sub-label" for="input_112_full" id="sublabel_112_masked" style="min-height:13px" aria-hidden="false">Favor ingrese un número de teléfono válido.</label></span> </div>
+				</li>
+				<li class="form-line" data-type="control_dropdown" id="id_6"><label class="form-label form-label-top form-label-auto" id="label_6" for="input_6"> Género </label>
+					<div id="cid_6" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_6" name="q6_genero" style="width:310px" data-component="dropdown" aria-label="Género" required>
+						<option value="">Seleccione</option>
+						<option value="Masculino">Masculino</option>
+						<option value="Femenino">Femenino</option>
+					</select> </div>
+				</li>
+				<li class="form-line jf-required" data-type="control_birthdate" id="id_20"><label class="form-label form-label-top form-label-auto" id="label_20" for="input_20"> Edad <span class="form-required">*</span></label>
+					<div id="cid_20" class="form-input-wide jf-required" data-layout="full">
+						<div data-wrapper-react="true"><select class="form-dropdown" id="Edad" name="q6_fecha" style="width:110px" data-component="dropdown" aria-label="Edad" required>
+							<option value="">Seleccione</option>
+							<option value="DE 18 A 25 AÑOS">18 - 25 Años</option>
+							<option value="DE 25 A 35 AÑOS">26 - 35 Años</option>
+							<option value="DE 35 A 45 AÑOS">36 - 45 Años</option>
+							<option value="DE 45 A 55 AÑOS">46 - 55 Años</option>
+							<option value="DE 55 AÑOS A MÁS">Mayor a 56 Años</option>
+						</select> </div>
+					</div>
+				</li>
+				<li class="form-line" data-type="control_textbox" id="id_114"><label class="form-label form-label-top form-label-auto" id="label_114" for="input_114"> Ocupación </label>
+					<div id="cid_114" class="form-input-wide" data-layout="half"> <input type="text" id="input_114" name="q114_ocupacion" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" value="" data-component="textbox" aria-labelledby="label_114" placeholder="" required> </div>
+				</li>
+				<li class="form-line" data-type="control_dropdown" id="id_116"><label class="form-label form-label-top form-label-auto" id="label_116" for="input_116"> Estado Laboral </label>
+					<div id="cid_116" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_116" name="q116_estadoLaboral" style="width:310px" data-component="dropdown" aria-label="Estado Laboral" required>
+						<option value="">Seleccione</option>
+						<option value="Dependiente">Dependiente</option>
+						<option value="Independiente">Independiente</option>
+					</select> </div>
+				</li>
+				<li class="form-line jf-required allowTime" data-type="control_datetime" id="id_22"><label class="form-label form-label-left" id="label_22" for="lite_mode_22"> Fecha y Hora de Contacto <span class="form-required">*</span></label>
+					<div id="cid_22" class="form-input jf-required" data-layout="full">
+						<div data-wrapper-react="true" class="extended">
+							<span class="form-sub-label-container" style="vertical-align:top">
+
+								<input class="form-textbox" id="lite_mode_22" size="12" data-maxlength="12" required data-format="ddmmyyyy" data-seperator="-" placeholder="DD-MM-YYYY"  inputmode="numeric" type="datetime-local">
+
+								<img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_128_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2"><label class="form-sub-label is-empty" for="lite_mode_128" id="sublabel_128_litemode" style="min-height:13px" aria-hidden="false"></label></span>
+
+								<span class="allowTime-container timeAMPM">
+								<div data-wrapper-react="true"><span class="form-sub-label-container hasAMPM" style="vertical-align:top"><input type="time" class="currentTime time-dropdown form-textbox " id="input_22_timeInput" name="q22_fechaY[timeInput]" required aria-labelledby="label_22 sublabel_22_hour" data-mask="hh:MM" v data-version="v2" inputmode="numeric" placeholder="HH : MM" required><label data-seperate-translate="true" class="form-sub-label" for="input_22_timeInput" id="sublabel_22_hour" style="min-height:13px" aria-hidden="false">Hora Minutos</label></span><span class="form-sub-label-container" style="vertical-align:top">
+
+								</div>
+							</span>
+						</div>
+					</div>
+				</li>
+				<li class="form-line" data-type="control_dropdown" id="id_117"><label class="form-label form-label-top form-label-auto" id="label_117" for="input_117"> Tipo de Contacto </label>
+					<div id="cid_117" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_117" name="q117_tipoDe" style="width:310px" data-component="dropdown" aria-label="Tipo de Contacto" required>
+						<option value="">Seleccione</option>
+						<option value="Referidos">Referidos</option>
+						<option value="Base de Datos">Base de Datos</option>
+						<option value="Volanteo">Volanteo</option>
+						<option value="Redes Sociales">Redes Sociales</option>
+					</select> </div>
+				</li>
+				<li class="form-line" data-type="control_textbox" id="id_119"><label class="form-label form-label-top form-label-auto" id="label_119" for="input_119"> Lugar de Residencia </label>
+					<div id="cid_119" class="form-input-wide" data-layout="half"> <input type="text" id="input_119" name="q119_lugarDe" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" value="" data-component="textbox" aria-labelledby="label_119" placeholder="" required> </div>
+				</li>
+				<li class="form-line" data-type="control_dropdown" id="id_120"><label class="form-label form-label-top form-label-auto" id="label_120" for="input_120"> Estado Prospecto </label>
+					<div id="cid_120" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="input_120" name="q120_estadoProspecto" style="width:310px" data-component="dropdown" aria-label="Estado Prospecto"required> 
+						<option value="">Seleccione</option>
+						<option value="Análisis">Análisis</option>
+						<option value="Cotización">Cotización</option>
+						<option value="Negociación">Negociación</option>
+					</select> </div>
+				</li>
+				<li class="form-line" data-type="control_textbox" id="id_122"><label class="form-label form-label-top form-label-auto" id="label_122" for="input_122"> Supervisor </label>
+					<div id="cid_122" class="form-input-wide" data-layout="half"> <input type="text" id="input_122" name="q122_supervisor" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" value="" data-component="textbox" aria-labelledby="label_122" placeholder="" required> </div>
+				</li>
+				<li class="form-line" data-type="control_textbox" id="id_123"><label class="form-label form-label-top form-label-auto" id="label_123" for="input_123"> Asesor </label>
+					<div id="cid_123" class="form-input-wide" data-layout="half"> <input type="text" id="input_123" name="q123_asesor" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" value="" data-component="textbox" aria-labelledby="label_123" placeholder="" required> </div>
+				</li>
+				<li class="form-line" data-type="control_textarea" id="id_125"><label class="form-label form-label-top form-label-auto" id="label_125" for="input_125"> Comentarios </label>
+					<div id="cid_125" class="form-input-wide" data-layout="full"> <textarea id="input_125" class="form-textarea" name="q125_comentarios" style="width:648px;height:163px" data-component="textarea" aria-labelledby="label_125" required ></textarea> </div>
+				</li>
+				<li class="form-line" data-type="control_textbox" id="id_126"><label class="form-label form-label-top form-label-auto" id="label_126" for="input_126"> Residencial Inmobiliario </label>
+					<div id="cid_126" class="form-input-wide" data-layout="half"> <input type="text" id="input_126" name="q126_residencialInmobiliario" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" value="" data-component="textbox" aria-labelledby="label_126" placeholder="" required> </div>
+				</li>
+				<li class="form-line" data-type="control_datetime" id="id_128"><label class="form-label form-label-top form-label-auto" id="label_128" for="lite_mode_128"> Fecha Próxima Acción </label>
+					<div id="cid_128" class="form-input-wide" data-layout="half">
+						<div data-wrapper-react="true">
+							<div style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox " id="month_128"  size="2" data-maxlength="2" data-age="" maxlength="2" value="" autocomplete="off" aria-labelledby="label_128 sublabel_128_month" inputmode="numeric" placeholder="" required><span class="date-separate" aria-hidden="true">&nbsp;-</span><label class="form-sub-label" for="month_128" id="sublabel_128_month" style="min-height:13px" aria-hidden="false">Mes</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox " id="day_128" size="2" data-maxlength="2" data-age="" maxlength="2" value="" autocomplete="off" aria-labelledby="label_128 sublabel_128_day" inputmode="numeric" placeholder="" required><span class="date-separate" aria-hidden="true">&nbsp;-</span><label class="form-sub-label" for="day_128" id="sublabel_128_day" style="min-height:13px" aria-hidden="false">Día</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox " id="year_128" size="4" data-maxlength="4" data-age="" maxlength="4" value="" autocomplete="off" aria-labelledby="label_128 sublabel_128_year" placeholder="" required><label class="form-sub-label" for="year_128" id="sublabel_128_year" style="min-height:13px" aria-hidden="false">Año</label></span></div><span class="form-sub-label-container" style="vertical-align:top">
+
+								<input type="datetime-local" class="form-textbox " id="lite_mode_128" size="12" data-maxlength="12" data-age="" value="" data-format="mmddyyyy" data-seperator="-" placeholder="MM-DD-YYYY" autocomplete="off" aria-labelledby="label_128" inputmode="numeric" required>
+
+								<img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_128_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2"><label class="form-sub-label is-empty" for="lite_mode_128" id="sublabel_128_litemode" style="min-height:13px" aria-hidden="false"></label></span>
+						</div>
+					</div>
+				</li>
+				<li class="form-line" data-type="control_dropdown" id="id_129"><label class="form-label form-label-top form-label-auto" id="label_129" for="input_129"> Acción </label>
+					<div id="cid_129" class="form-input-wide" data-layout="half"> 
+						<select class="form-dropdown" id="input_129" name="q129_accion" style="width:310px" data-component="dropdown" aria-label="Acción" required>
+						<option value="">Seleccione</option>
+						<option value="Seguimiento">Seguimiento</option>
+						<option value="Pedir Referidos">Pedir Referidos</option>
+						<option value="Visita a Proyecto">Visita a Proyecto</option>
+						<option value="Presentación Zoom">Presentación Zoom</option>
+						<option value="Llamada de Calidad">Llamada de Calidad</option>
+						<option value="Estado de Negociación">Estado de Negociación</option>
+						<option value="Pasar a Base de Datos">Pasar a Base de Datos</option>
+					</select> </div>
+				</li>
+				<li class="form-line" data-type="control_button" id="id_111">
+					<div id="cid_111" class="form-input-wide" data-layout="full">
+						<div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
+							<button id="input_111" class="form-submit-button form-submit-button-tables-600 submit-button jf-form-buttons jsTest-submitField" >Enviar</button>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr" ></script>
+		<script src="{% static 'scripts/leads.js' %}" type="module"></script>
+		<script type="text/javascript">
+			flatpickr("input[type=datetime-local]",{});
+		</script>
+
+
+	</body>
+
+	{%endblock%}

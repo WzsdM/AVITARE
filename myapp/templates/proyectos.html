@@ -5,46 +5,132 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Proyectos</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/proyectos.css'%}">
-	<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-	  apiKey: "AIzaSyCudkjXLezfl4cU9tZzVL7QghFIB46egmM",
-	  authDomain: "salferinversiones.firebaseapp.com",
-	  databaseURL: "https://salferinversiones.firebaseio.com",
-	  projectId: "salferinversiones",
-	  storageBucket: "salferinversiones.appspot.com",
-	  messagingSenderId: "499539526287",
-	  appId: "1:499539526287:web:c57319e0eb7dd54a99a6fa",
-	  measurementId: "G-TQSZ3R7NG0"
-	};
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
 </head>
 <body>
 
-	<nav class="upnavbar navbar"></nav>
-	<nav class="upnavbardown navbar"></nav>
-
-	<div class="cuerpo">
-		<a href="{% url 'crearPro' %}" class="btnAnyadir">
-			Añadir Proyecto
-			<i class="bi bi-patch-plus-fill"></i>
-		</a>
-
+	<link rel="stylesheet" type="text/css" href="{% static 'css/proyectos.css'%}"/>
+	<div class="views-main project-index">
+		<article class="blocks blockCV1">
+		<div class="options" style="display: none;">
+			<a rel="modal:open" href="/events/project_id/473/new" original_title="Nuevo Evento"><i class="calendar-icon-gray"></i>
+			</a><div class="separation-options"></div>
+			<a rel="modal:open" href="/projects/473/assigned" original_title="Asignación de Supervisores"><i class="asign-icon"></i>
+				<div class="separation-options"></div>
+			</a><a href="/projects/473/edit" original_title="Editar"><i class="edit-icon"></i>
+				<div class="separation-options"></div>
+			</a><a href="/projects/473/project_settings/edit" original_title="Configuración"><i class="setting-icon-gray"></i>
+				<div class="separation-options"></div>
+			</a><a class="view_btn" href="/projects/473/map" original_title="Mapeo de Unidades"><i class="fa fa-building fa-lg"></i></a><div class="separation-options"></div><a class="view_btn" href="/projects/473/flat" original_title="Mapeo de Lotes"><i class="fa fa-map fa-lg"></i></a>
+			<div class="separation-options"></div>
+		</div>
+		<h6 class="">Residencial Campo Verde</h6>
+		<div class="img-block-mask">
+			<img alt="Vista previa de proyecto" width="100" height="100" class="img-block" src="https://grupoavitare.com/wp-content/uploads/elementor/thumbs/3-2-pudg8b0j73vj77spq1aq1lw32a45x8enwy06rtesvg.png">
+		</div>
+		<p class="comment">Lotización</p>
+		<p class="comment">Lambayeque</p>
+		<div class="progress-wrapper">
+			<i class="building-icon-gray"></i>
+			<p>10.00%</p>
+			<div class="progress progress-striped active" original_title="Avance de Construcción">
+				<div class="bar" style="width: 10.00%"></div>
+			</div>
+		</div>
+		
+		<ul>
+			<li>
+				<i class="unit-icon"></i>
+				<a href="/projects/473/units" class="infounits" original_title="">Unidades (276)</a>
+			</li>
+			<li>
+				<i class="unit-icon"></i>
+				<a href="/projects/473/units?available=true" class="infounits" original_title="">Unidades disponibles (219)</a>
+			</li>
+			<div class="clear"></div>
+		</ul>
+		<a class="btn__primary" href="/projects/473" class="infounits" original_title="">Ver Proyecto</a>
+		</article>
+		<article class="blocks blockCV2">
+		<div class="options" style="display: none;">
+			<a rel="modal:open" href="/events/project_id/473/new" original_title="Nuevo Evento"><i class="calendar-icon-gray"></i>
+			</a><div class="separation-options"></div>
+			<a rel="modal:open" href="/projects/473/assigned" original_title="Asignación de Supervisores"><i class="asign-icon"></i>
+				<div class="separation-options"></div>
+			</a><a href="/projects/473/edit" original_title="Editar"><i class="edit-icon"></i>
+				<div class="separation-options"></div>
+			</a><a href="/projects/473/project_settings/edit" original_title="Configuración"><i class="setting-icon-gray"></i>
+				<div class="separation-options"></div>
+			</a><a class="view_btn" href="/projects/473/map" original_title="Mapeo de Unidades"><i class="fa fa-building fa-lg"></i></a><div class="separation-options"></div><a class="view_btn" href="/projects/473/flat" original_title="Mapeo de Lotes"><i class="fa fa-map fa-lg"></i></a>
+			<div class="separation-options"></div>
+		</div>
+		<h6 class="">Campo Verdes II</h6>
+		<div class="img-block-mask">
+			<img alt="Vista previa de proyecto" width="100" height="100" class="img-block" src="https://grupoavitare.com/wp-content/uploads/elementor/thumbs/3-2-pudg8b0j73vj77spq1aq1lw32a45x8enwy06rtesvg.png">
+		</div>
+		<p class="comment">Lotización</p>
+		<p class="comment">Lambayeque</p>
+		<div class="progress-wrapper">
+			<i class="building-icon-gray"></i>
+			<p>10.00%</p>
+			<div class="progress progress-striped active" original_title="Avance de Construcción">
+				<div class="bar" style="width: 10.00%"></div>
+			</div>
+		</div>
+		
+		<ul>
+			<li>
+				<i class="unit-icon"></i>
+				<a href="/projects/473/units" class="infounits" original_title="">Unidades (276)</a>
+			</li>
+			<li>
+				<i class="unit-icon"></i>
+				<a href="/projects/473/units?available=true" class="infounits" original_title="">Unidades disponibles (219)</a>
+			</li>
+			<div class="clear"></div>
+		</ul>
+		<a class="btn__primary" href="/projects/473" class="infounits" original_title="">Ver Proyecto</a>
+		</article>
+		<article class="blocks blockCV3">
+		<div class="options" style="display: none;">
+			<a rel="modal:open" href="/events/project_id/473/new" original_title="Nuevo Evento"><i class="calendar-icon-gray"></i>
+			</a><div class="separation-options"></div>
+			<a rel="modal:open" href="/projects/473/assigned" original_title="Asignación de Supervisores"><i class="asign-icon"></i>
+				<div class="separation-options"></div>
+			</a><a href="/projects/473/edit" original_title="Editar"><i class="edit-icon"></i>
+				<div class="separation-options"></div>
+			</a><a href="/projects/473/project_settings/edit" original_title="Configuración"><i class="setting-icon-gray"></i>
+				<div class="separation-options"></div>
+			</a><a class="view_btn" href="/projects/473/map" original_title="Mapeo de Unidades"><i class="fa fa-building fa-lg"></i></a><div class="separation-options"></div><a class="view_btn" href="/projects/473/flat" original_title="Mapeo de Lotes"><i class="fa fa-map fa-lg"></i></a>
+			<div class="separation-options"></div>
+		</div>
+		<h6 class="">Campo Verdes III</h6>
+		<div class="img-block-mask">
+			<img alt="Vista previa de proyecto" width="100" height="100" class="img-block" src="https://grupoavitare.com/wp-content/uploads/elementor/thumbs/3-2-pudg8b0j73vj77spq1aq1lw32a45x8enwy06rtesvg.png">
+		</div>
+		<p class="comment">Lotización</p>
+		<p class="comment">Lambayeque</p>
+		<div class="progress-wrapper">
+			<i class="building-icon-gray"></i>
+			<p>10.00%</p>
+			<div class="progress progress-striped active" original_title="Avance de Construcción">
+				<div class="bar" style="width: 10.00%"></div>
+			</div>
+		</div>
+		
+		<ul>
+			<li>
+				<i class="unit-icon"></i>
+				<a href="/projects/473/units" class="infounits" original_title="">Unidades (276)</a>
+			</li>
+			<li>
+				<i class="unit-icon"></i>
+				<a href="/projects/473/units?available=true" class="infounits" original_title="">Unidades disponibles (219)</a>
+			</li>
+			<div class="clear"></div>
+		</ul>
+		<a class="btn__primary" href="/projects/473" class="infounits" original_title="">Ver Proyecto</a>
+		</article>
 	</div>
-
-
-
+	
 </body>
 {% endblock %}

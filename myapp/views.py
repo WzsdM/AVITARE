@@ -10,5 +10,9 @@ def unidades(request):
     return render(request,'unidades.html')
 def login(request):
     return render(request,'login.html')
+def createleads(request):
+    return render(request,'createleads.html')
+def leads(request):
+    return render(request,'leads.html')
 
 # Create your views here.

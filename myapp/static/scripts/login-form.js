@@ -9,8 +9,6 @@ e.preventDefault()
 const email=loginForm['session_login'].value
 const password = loginForm['session_password'].value
 
-console.log(email,password)
-
    try {
     const userCredentials = await signInWithEmailAndPassword(auth,email,password)
     showMessage("Ingreso Correcto")

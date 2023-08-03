@@ -134,58 +134,66 @@ a{
 	display: flex;
 }
 .navbarLateral{
-	background: var(--primary);
-	width: 18vw;
-	height: 92.5vh;
-	box-sizing: border-box;
+	background: var(--primary)!important;
+	width: 18vw!important;
+	height: 92.5vh!important;
+	box-sizing: border-box!important;
 	padding-left: 0!important;
-	transition: ease-in-out;
-	transition-duration: .8s;
-	position: fixed;
-	bottom: 0;
-	z-index: 999;
+	transition: ease-in-out!important;
+	transition-duration: .8s!important;
+	position: fixed!important;
+	bottom: 0!important;
+	z-index: 999!important;
+	-webkit-transition: ease-in-out;
+	-moz-transition: ease-in-out;
+	-ms-transition: ease-in-out;
+	-o-transition: ease-in-out;
 }
 .navbarLateral ul{
 	padding-left: 0!important;
 }
 li a{
-    background: transparent;
-    display: flex;
-    height: 2.3em;
-    align-items: center;
-    border-radius: 0.6em;
-    margin: 0.6em;
-    transition: ease-in-out;
-    transition-duration: 0.4s;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding-left: 0.6em;
-    padding-right: 0.6em;
-    -webkit-border-radius: 0.6em;
-    -moz-border-radius: 0.6em;
-    -ms-border-radius: 0.6em;
-    -o-border-radius: 0.6em;
+    background: transparent!important;
+    display: flex!important;
+    height: 2.3em!important;
+    align-items: center!important;
+    border-radius: 0.6em!important;
+    margin: 0.6em!important;
+    transition: ease-in-out!important;
+    transition-duration: 0.4s!important;
+    justify-content: space-between!important;
+    box-sizing: border-box!important;
+    padding-left: 0.6em!important;
+    padding-right: 0.6em!important;
+    -webkit-border-radius: 0.6em!important;
+    -moz-border-radius: 0.6em!important;
+    -ms-border-radius: 0.6em!important;
+    -o-border-radius: 0.6em!important;
+    -webkit-transition: ease-in-out!important;
+    -moz-transition: ease-in-out!important;
+    -ms-transition: ease-in-out!important;
+    -o-transition: ease-in-out!important;
 }
 li a:hover{
-	background: var(--white);
-	color: var(--primary);
+	background: var(--white)!important;
+	color: var(--primary)!important;
 }
 .abajo{
-	justify-self: end;
+	justify-self: end!important;
 }
 .active{
-	background: var(--white);
-	color: var(--primary);
+	background: var(--white)!important;
+	color: var(--primary)!important;
 }
 .contentBlock{
 	width: 84vw;
-	height: 90vh;
+	height: 93vh;
 	display: inline-grid;
 	align-items: center;
 	justify-content: center;
 	justify-items: center;
 	position: inherit;
-	margin-top: 10vh;
+	margin-top: 7vh;
 	margin-left: 18vw;
 	overflow: auto;
 	overflow-y: auto;
@@ -246,4 +254,9 @@ li a:hover{
 }
 .activeMenu{
 	translate: -600px;
+	transition: ease-in-out;
+	-webkit-transition: ease-in-out;
+	-moz-transition: ease-in-out;
+	-ms-transition: ease-in-out;
+	-o-transition: ease-in-out;
 }
