@@ -25,7 +25,15 @@ SECRET_KEY = 'django-insecure-%^3^$+gb-oey%v@@sk+5a9u05c_x3494*fdyaa9c-4k)^j4*g2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app','127.0.0.1']
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_ACCESS_KEY_ID= "AKIAQAKLFWS6QD6M3CJ3"
+AWS_SECRET_ACCESS_KEY= "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"
+AWS_STORAGE_BUCKET_NAME="static-files-avitare"
+DEFAULT_FIRE_STORAGE="storages.backends.s3boto3.S3Boto3Storage"
+STATICFILES_STORAGE="storages.backends.s3boto3.S3Boto3Storage"
+AWS_S3_CUSTOM_DOMAIN='%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 
 # Application definition
@@ -38,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
+    'storages',
 ]
 
 MIDDLEWARE = [
