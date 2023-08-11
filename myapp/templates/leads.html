@@ -38,5 +38,75 @@
         </div>
     </div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6>
+              <span id="fContacto"></span>
+          </h6>  
+          <h6>
+              <span id="infoEdad"></span>
+              <span id="infoGen"></span>
+          </h6>
+          <h6>
+            <span id="infoLugar"></span>
+            <span id="infoOcup"></span>
+            <span id="infoELaboral"></span>
+          </h6>
+          <h6>
+            <span id="infoEProspecto"></span>
+            <span id="infoInteres"></span>
+            <span id="infoTelefono"></span>
+          </h6>
+          <h6>
+            <span id="infoProyecto"></span>
+            <span id="infoSupervisor"></span>
+            <span id="infoAsesor"></span>
+          </h6>
+          <h6>
+            <span id="infoComentarios"></span>
+          </h6>
+          <h6>
+            <span id="infoFPAccion"></span>
+            <span id="infoAccion"></span>
+          </h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Actualizar Próxima Acción</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--MODAL DE CAMBIO DE ACCIÓN-->
+
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Hide this modal and show the first with the button below.
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script type="module" src="{%static 'scripts/leerLeads.js'%}"></script>
+<script
+  src="https://code.jquery.com/jquery-3.7.0.js"
+  integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+  crossorigin="anonymous"></script>
 {% endblock %}
