@@ -2,7 +2,10 @@
 {% load static %}
 {% block content%}
 
-<link rel="stylesheet" type="text/css" href="{%static 'css/leerleads.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'css/leads.css'%}">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 <div class="header-C">
 
@@ -91,20 +94,79 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Añadir Próxima Acción</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Hide this modal and show the first with the button below.
+        
+        <form>
+          <li class="form-line" data-type="control_dropdown" id="id_120"><label class="form-label form-label-top form-label-auto" id="label_120" for="input_120"> Estado Prospecto Actual</label>
+            <div id="cid_120" class="form-input-wide" data-layout="half"> 
+              <select class="form-dropdown form-component" id="new_estadoProspecto" name="q120_estadoProspecto" style="width:310px" data-component="dropdown" aria-label="Estado Prospecto"required> 
+              <option value="">Seleccione</option>
+              <option value="Análisis">Análisis</option>
+              <option value="Cotización">Cotización</option>
+              <option value="Negociación">Negociación</option>
+            </select> </div>
+          </li>
+          <li class="form-line" data-type="control_dropdown" id="id_117"><label class="form-label form-label-top form-label-auto" id="label_117" for="input_117"> Interés Actual </label>
+            <div id="cid_117" class="form-input-wide" data-layout="half"> 
+              <select class="form-dropdown form-component" id="new_Interes" name="q117_tipoDe" style="width:310px" data-component="dropdown" aria-label="Interés en el Proyecto" required>
+              <option value="">Seleccione</option>
+              <option value="Desinteresado">Desinteresado</option>
+              <option value="Indeciso">Indeciso</option>
+              <option value="Animado">Animado</option>
+              <option value="Entusiasmado">Entusiasmado</option>
+            </select> </div>
+          </li>
+          <li class="form-line" data-type="control_datetime" id="id_128">
+            <label class="form-label form-label-top form-label-auto" id="label_128" for="lite_mode_128"> Fecha Próxima Acción </label>
+            <div id="cid_128" class="form-input-wide" data-layout="half">
+              <div data-wrapper-react="true">
+                <div><span class="form-sub-label-container" style="vertical-align:top;width: 100%;display: flex;justify-content: space-between;align-items: center;">
+                  
+                  <input type="date" class="form-textbox form-component" id="new_fechaPAccion" size="12" data-maxlength="12" data-age="" value="" data-format="mmddyyyy" data-seperator="-" placeholder="MM-DD-YYYY" autocomplete="off" aria-labelledby="label_128" inputmode="numeric" required style="width:60%!important;">
+
+                  <input type="time" class="form-textbox form-component" id="new_horaPAccion" size="12" data-maxlength="12" data-age="" value="" data-format="mmddyyyy" data-seperator="-" placeholder="MM-DD-YYYY" autocomplete="off" aria-labelledby="label_128" inputmode="numeric" required style="width:30%!important;">
+  
+              </div>
+            </div>
+          </li>
+          <li class="form-line" data-type="control_dropdown" id="id_129"><label class="form-label form-label-top form-label-auto" id="label_129" for="input_129"> Acción </label>
+            <div id="cid_129" class="form-input-wide" data-layout="half"> 
+              <select class="form-dropdown form-component" id="new_accion" name="q129_accion" style="width:310px" data-component="dropdown" aria-label="Acción" required>
+              <option value="">Seleccione</option>
+              <option value="Seguimiento">Seguimiento</option>
+              <option value="Pedir Referidos">Pedir Referidos</option>
+              <option value="Visita a Proyecto">Visita a Proyecto</option>
+              <option value="Presentación Zoom">Presentación Zoom</option>
+              <option value="Llamada de Calidad">Llamada de Calidad</option>
+              <option value="Estado de Negociación">Estado de Negociación</option>
+              <option value="Pasar a Base de Datos">Pasar a Base de Datos</option>
+            </select> </div>
+          </li>
+        <a id="btnFormPAccion" style="
+        margin-top: 6%;
+        margin-left: 3%;
+        height: 6vh;
+        border-radius: 6px;
+        width: 34.5vw;
+        background: #6fb767;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    ">Crear Acción</a>
+        </form>
+
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
       </div>
     </div>
   </div>
 </div>
 
-<script type="module" src="{%static 'scripts/leerLeads.js'%}"></script>
+<script type="module" src="{%static 'scripts/leads.js'%}"></script>
 <script
   src="https://code.jquery.com/jquery-3.7.0.js"
   integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
